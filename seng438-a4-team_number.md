@@ -43,6 +43,10 @@ Once again, this mutant was created on the temp variable used in the the hashCod
 This mutation also took place in the Range constructors, yet since its doing the calculation before the variable being called, it generates different bahavior which was caught by the JUnits tests. On line 96: _this.upper = upper;_ it was created a mutant, changing it to: _this.upper = ++upper_. But on the designed JUnits tests, we asserted the correct range was created by testing the upper and lower bounds of the Range object. As a consequence of that, the tests are able to spot the mutant and kill it.        
 ![image](https://user-images.githubusercontent.com/30624408/225461638-59994605-7b4b-49e7-a616-e1cf3162dda8.png)
 
+7) **Replaced double subtraction with division → KILLED** --> getLength() (123)                  
+In the getLength function, the program should return the subtraction between the upper and lower bounds of the Range object. However, the mutant created is changing _return this.upper - this.lower;_ into a division: _return this.upper/this.lower;_ . This logic will certainly not return the same value of most of the cases. We wrote JUnit tests to test out the length of smaller, big and 0 size Ranges, therefore the test suite was able to spot the mutant and kill it accordingly.           
+![image](https://user-images.githubusercontent.com/30624408/225466272-48a92005-6b61-4ae8-af63-c0f856adb8d1.png)
+
 
 # Report all the statistics and the mutation score for each test class
 
