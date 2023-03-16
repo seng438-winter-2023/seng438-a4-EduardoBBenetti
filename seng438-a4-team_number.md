@@ -67,6 +67,7 @@ On function getCentralValue, it should return the value between the two bounds o
 # A discussion of what could have been done to improve the mutation score of the test suites
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
+Mutation testing is a form of white box testing where the testers are able of closely analyse the components of the program. The main purpose of implementing mutation testing is to increase the effectiveness of the testing process and consequently the quality of the software. With small changes in the source code, we able to analyze the effectivess and coverage of the JUnit tests designed for the program. Aa high mutation score would represent a very effective test suite, meaning that the software would be covering a large possibilities of inputs.
 
 # Explain your SELENUIM test case design process
 
