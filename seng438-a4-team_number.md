@@ -69,6 +69,16 @@ On function getCentralValue, it should return the value between the two bounds o
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 Mutation testing is a form of white box testing where the testers are able of closely analyse the components of the program. The main purpose of implementing mutation testing is to increase the effectiveness of the testing process and consequently the quality of the software. With small changes in the source code, we able to analyze the effectivess and coverage of the JUnit tests designed for the program. Aa high mutation score would represent a very effective test suite, meaning that the software would be covering a large possibilities of inputs.
 
+ADVANTAGES:
+- Ability to ensure the quality of the test suite, and overall source code
+- Mutation score give a detailed breakdown of which types of inputs are not being hadled by the test suit
+- Early detection of errors to avoid getting into the production phase
+
+DISADVANTAGES:
+- Overall a very time consuming process, since its very detailed process, it takes time to review the series of test performed on a software
+- Equivalent mutation can cause a series of misunderstading during the testing process
+- A very overwhelming process in general due to the huge amount of testing and data that has to extracted in order to turn into useful insights about the program
+
 # Explain your SELENUIM test case design process
 
 # Explain the use of assertions and checkpoints
@@ -79,7 +89,7 @@ Mutation testing is a form of white box testing where the testers are able of cl
 
 # How the team work/effort was divided and managed
 
-
 # Difficulties encountered, challenges overcome, and lessons learned
 
 # Comments/feedback on the lab itself
+Overall it was an interesting lab to get to apply mutation testing techniques, rather than just learning from the slides. However, after talking to members of the industry community, many employees mentioned that mutation is not very common on the day to day of software engineers, therefore it might not be very useful for the future students. Perhaps, new tools with similar functionalities as PiTest should be used for students to get a hands on experience with the testing techniques. With regards to the lab instructions, I believe they could be more well explained, maybe a video to get the lab assignment correctly setup would be very useful, rather than trying different ways before actually getting it to work. Many students are not very familiar with Eclipse IDE, making it hard to install all the plugins and dependencies require for this projects. 
