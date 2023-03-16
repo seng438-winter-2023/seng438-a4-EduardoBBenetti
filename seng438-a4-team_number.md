@@ -64,6 +64,28 @@ On function getCentralValue, it should return the value between the two bounds o
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
+Equivalent mutants are very important for a complete analysis of the testing process of a software. Fundamentally, equivalent mutants are syntactically different but semantically equivalent to the original code. Meaning that, it is possible to create mutants that follow the same exact logic even without being written the same way, by changing inequality signs or with simple mathematical computations. Since mutations are used to simulate possible human errors or simple logical issues, using equivalent mutants will give the developer further information about the quality of their test suit. With that, they should be able to spot weaknesses in the unit test and consequently fix them to have a higher-quality final product. 
+On the other hand, that mutation score is a simple ratio of the mutations that were implemented in the code and the amounts there were spotted by the test suite. For example, with the creation of 10 mutants (either by the developer or tools like PiTest) where 6 of them are "killed" or tested along the testing process, this would lead to a 6/10 or 60% mutation score. In case equivalent mutants are introduced in the mutation testing process, it can either inflate or reduce the accuracy of the testing suite. Since equivalent mutants are different ways of following the same logic in the code, they should carefully used. Going back to the previous example, lets suppose that all the 10 mutations are equivalent, then 1 test case would be enough to achieve a 100% mutation score, which might represent a extremelly high score and a very well test software. But in reality, not all possible routes were tested and the software is not ready to go into production. Similarly, if all mutations are equivalent and the test suite does not cover the mutations, it can lead to 0% mutation score. To conclude, equivalent mutations are useful tools to test the quality of the current mutations that were implemented, yet it has some drawbacks which should be take into consideration as possibly leading to innacurate mutation scores. 
+
+To conclude, the following max function is an example of equivalent mutants:
+
+public int max(int a, int b) {
+    if (a > b) {
+        return a; } 
+    else {
+        return b; }
+}
+
+
+public int max(int a, int b) {
+    if (a <= b) {  
+        return a; } 
+    else {
+        return b; }
+}
+
+Even been written in a different way (their if statement conditions) they will always have the same outputs since their logic is the same. However, it can increase the chances of spoting flaws in the test suite
+
 # A discussion of what could have been done to improve the mutation score of the test suites
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
