@@ -11,6 +11,7 @@
 
 # Introduction
 
+The primary goal of this lab is provide a complete understanding about two essential techniques for software testing: Mutation and GUI Testing. Firslty, this report will cover how mutation was initially covered on the material that the team created in assignment 3, followed by an analysis about 10 functions that the team selected to describe. After analyzing the current coverage the program had, the team tried in many way to increase its value by creating different JUnit tests to "kill" the mutants, using the PiTest library. On the other hand, the second portion of this lab report, we conducted a GUI analysis using Selenium, a very well knonw web interface tool to test and compare different outcomes of web pages. Finally, we described how this process went, and describbing the series of challenges and knowledge the team acquired through out the process. 
 
 # Analysis of 10 Mutants of the Range class 
 
