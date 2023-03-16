@@ -88,6 +88,7 @@ DISADVANTAGES:
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
 # How the team work/effort was divided and managed
+For simplicity we divided the team based on the past constributions of of the Range and Data Utilities class for the first part of the assignment. With that said, the two doubles created different test cases aiming to increase the mutation coverage of both classes. Similar to previous assignment, this method worked really well, leading to effective contributions of all team members, learning a lot from each other through out the lab assignment. On the second part of the assignment, using Selenium, we worked on it together since it was a shorter tasks, having the opportunity to discusss different ideas about the steps of the process to make it more effective. Overall it was very successful process, were we had the involvement of all memebrs to share ideas and collaborate in different manners.
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
