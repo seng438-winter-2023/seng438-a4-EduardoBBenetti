@@ -1,4 +1,4 @@
-to run the test scripts in the project AmazonGUITesting, make sure you are not signed in to an amazon.ca account before executing the tests
+To run the test scripts in the project AmazonGUITesting, make sure you are NOT signed in to an Amazon.ca account before executing the tests
 
 Please follow this order in executing the tests :
 
