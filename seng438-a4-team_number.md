@@ -53,10 +53,12 @@ In the line 312, in function expandToInclude, the program is returning the Range
 Inside the getUpperBound (which should serve as a simples getter function), the function should return the value of the upper bound. On line 114, the function is simply returning it, with the following command: _return this.upper;_ , yet with the addition of the mutant, it transforms into the following line: _return ++this.upper;_ . In this second case, we are firstly incrementing the variable, then retuning it to where it was called. With that said, the mutant will return a upper bound greater than its actual value, which was checked and tested on the test suit by checking if the create Range had exactly the same value for both bounds. With that said, the test suit was able to spot the mutant, and kill it      
 ![image](https://user-images.githubusercontent.com/30624408/225469868-4156e69d-71db-4d86-8c30-0a952032d8da.png)         
 
+10) **Substituted 2.0 with 1.0 → KILLED** --> getCentralValue() (132)
+On function getCentralValue, it should return the value between the two bounds of the Range object. For that to work, the class is dividing both bounds by 2.0 ( _return this.lower / 2.0 + this.upper / 2.0;_ ). Yet with the creation of the mutant, it is now dividing it by 1.0 (  _return this.lower / 1.0 + this.upper / 1.0;_ ), therefore returning the value of the bounds, rather than its midpoint. The team created in assignment 3 a JUnit test to spot this mutant, given it would only require to check if the values passed to the function is actually the midpoint for any Range where lower bound is not equal to upper bound. In that case, there should always be a midpoint. As a result, the JUnit test suite was able to spot the mutant and kill it accordingly.    
+![image](https://user-images.githubusercontent.com/30624408/225478565-d5627d97-f6c6-4fcf-9c99-16510dfdfc6c.png)
+
 
 # Report all the statistics and the mutation score for each test class
-
-
 
 # Analysis drawn on the effectiveness of each of the test classes
 
