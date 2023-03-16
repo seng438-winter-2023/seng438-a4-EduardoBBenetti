@@ -69,20 +69,20 @@ On the other hand, that mutation score is a simple ratio of the mutations that w
 
 To conclude, the following max function is an example of equivalent mutants:
 
-public int max(int a, int b) {
-    if (a > b) {
-        return a; } 
-    else {
-        return b; }
-}
-
-
-public int max(int a, int b) {
-    if (a <= b) {  
-        return a; } 
-    else {
-        return b; }
-}
+public int max(int a, int b) {           
+    if (a > b) {             
+        return a; }           
+    else {           
+        return b; }          
+}         
+            
+              
+public int max(int a, int b) {          
+    if (a <= b) {               
+        return a; }                  
+    else {                
+        return b; }             
+}                    
 
 Even been written in a different way (their if statement conditions) they will always have the same outputs since their logic is the same. However, it can increase the chances of spoting flaws in the test suite
 
