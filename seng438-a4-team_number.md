@@ -30,7 +30,7 @@ Similar to the previous, inside the Range constructor, the mutation is now decre
 
 4)  **Incremented (a++) integer local variable number 3 → SURVIVED** --> hashCode() (464)        
 Similar to the Range constructor, variable _temp_ was increased by the value of 1. Yet, it differs from the constructor case since this variable was only used locally by that function and not returned, making a harder to write JUnit tests to kill that mutant. The variable was then used to create the result variable (afterwards returned), but since it goes through calculation and then casted back into integer format, the small increase in temp might not be enough to change the final value of _result_. As a consequence of that, no written JUnit was able to kill that mutant, make it survive during the testing process. 
-![image](https://user-images.githubusercontent.com/30624408/225460347-a977735e-ffee-4b81-aff2-f0214a439c8a.png)
+![image](https://user-images.githubusercontent.com/30624408/225469538-b15e2701-1e1c-4820-8ef2-fe6f21c7355e.png)
 
 5) **Decremented (a--) integer local variable number 3 → SURVIVED** --> hashCode() (464)             
 Once again, this mutant was created on the temp variable used in the the hashCode function, yet since it was not returned and only used locally, it made it complex to test for mutants. Since it being changed within the function with the following line of code: _temp = Double.doubleToLongBits(this.lower);_ , reducing its value by 1, was not enough to change the value of results (being returned by the function). With that said, none of the written JUnit tests were able to spot that mutant, therefore surviving.
@@ -43,6 +43,14 @@ This mutation also took place in the Range constructors, yet since its doing the
 7) **Replaced double subtraction with division → KILLED** --> getLength() (123)                  
 In the getLength function, the program should return the subtraction between the upper and lower bounds of the Range object. However, the mutant created is changing _return this.upper - this.lower;_ into a division: _return this.upper/this.lower;_ . This logic will certainly not return the same value of most of the cases. We wrote JUnit tests to test out the length of smaller, big and 0 size Ranges, therefore the test suite was able to spot the mutant and kill it accordingly.           
 ![image](https://user-images.githubusercontent.com/30624408/225466272-48a92005-6b61-4ae8-af63-c0f856adb8d1.png)
+
+8) **Replaced return value with null for org/jfree/data/Range::expandToInclude → KILLED** --> expandToInclude() (312)        
+In the line 312, in function expandToInclude, the program is returning the Range object that was passed as an argument. Yet with the creation of the mutant, that same line went from: _return range;_ to _return null_ . In order to spot that mutant, the team created during assignment 3 a JUnit test to check for null returns, since that should not happen given no Range object should be passed as an argument for that function. As a result, the function JUnit was marked as a Killed, since we were able to spot the mutant                   
+![image](https://user-images.githubusercontent.com/30624408/225467183-da2bbc7c-ce23-4aad-ab4a-e0321014c966.png)
+
+9) **Incremented (++a) double field upper → KILLED** --> getUpperBound() (114)      
+Inside the getUpperBound (which should serve as a simples getter function), the function should return the value of the upper bound. On line 114, the function is simply returning it, with the following command: _return this.upper;_ , yet with the addition of the mutant, it transforms into the following line: _return ++this.upper;_ . In this second case, we are firstly incrementing the variable, then retuning it to where it was called. With that said, the mutant will return a upper bound greater than its actual value, which was checked and tested on the test suit by checking if the create Range had exactly the same value for both bounds. With that said, the test suit was able to spot the mutant, and kill it      
+![image](https://user-images.githubusercontent.com/30624408/225469868-4156e69d-71db-4d86-8c30-0a952032d8da.png)         
 
 
 # Report all the statistics and the mutation score for each test class
