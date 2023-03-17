@@ -249,7 +249,7 @@ public class DataUtilitiesTest {
 	 * can be arguments and are not equal.
 	 */
 	@Test
-	public void testEqualNullArray() { // 76: 2, 4, 7, 9, 10, 13, 16, 18
+	public void testEqualNullArray() {
 		double[][] array1 = null;
 		double[][] array2 = { { 11, -12, 0, 94, 132 }, { -84, 124, 12 } };
 
@@ -263,7 +263,7 @@ public class DataUtilitiesTest {
 	 * can be arguments and are not equal.
 	 */
 	@Test
-	public void testEqualArrayNull() { // 78: 2 // 79: 1, 2, 3, 4, 5, 6, 7
+	public void testEqualArrayNull() {
 		double[][] array2 = null;
 		double[][] array1 = { { 11, -12, 0, 94, 132 }, { -84, 124, 12 } };
 
@@ -277,7 +277,7 @@ public class DataUtilitiesTest {
 	 * can arguments and are found to be not equal.
 	 */
 	@Test
-	public void testEqualArraysDiffLength() { // 85: 13
+	public void testEqualArraysDiffLength() {
 		double[][] array1 = { { 11, -12, 0, 94, 132 }, { -84, 124, 12, 12, 1, 13.2, -10, 11 } };
 		double[][] array2 = { { 11, -12, 0, 94, 132 }, { -84, 124, 12 } };
 
@@ -290,7 +290,7 @@ public class DataUtilitiesTest {
 	 * Testing a null object as argument to calculateColumnTotal() with a column number of 0
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void calculateColumnTotalNull() { // 124: 1
+	public void calculateColumnTotalNull() {
 		double result = DataUtilities.calculateColumnTotal(null, 0);
 		assertEquals("Exception thrown is IllegalArgumentException", 0.0, result, .000000001d);
 	}
@@ -299,7 +299,7 @@ public class DataUtilitiesTest {
 	 * Testing passing a null object to calculateRowTotal() with a row number of 0
 	 */
 	@Test
-	public void calculateRowTotalNull() { // 175: 1
+	public void calculateRowTotalNull() {
 		try {
 			DataUtilities.calculateRowTotal(null, 0);
 			fail("Method should throw an exception");
@@ -309,7 +309,7 @@ public class DataUtilitiesTest {
 	}
     
 	@Test
-	public void createNumber2DNullArray() { // 242: 1
+	public void createNumber2DNullArray() {
 		try {
 			double[][] arrayToPass = null;
 			DataUtilities.createNumberArray2D(arrayToPass);
@@ -324,7 +324,7 @@ public class DataUtilitiesTest {
 	 * the test needs to assert that the expected array of minimum negative doubles is created.
 	 */
 	@Test
-	public void createNumberArrayMinDouble() { // 227: 2, 3, 5, 7, 9, 12, 13, 14, 18 // 228: 1, 4, 6, 13, 16
+	public void createNumberArrayMinDouble() {
 		Number[] array = { Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE };
 		double[] arrayTemp = { Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE };
 		Number[] array2 = DataUtilities.createNumberArray(arrayTemp);
@@ -335,7 +335,7 @@ public class DataUtilitiesTest {
 	 * Testing creation of a null double array and passing the object to a createNumberArray
 	 */
 	@Test
-	public void createNumberArrayNull() { // 225: 1
+	public void createNumberArrayNull() {
 		try {
 			double[] arrayToPass = null;
 			DataUtilities.createNumberArray(arrayToPass);
