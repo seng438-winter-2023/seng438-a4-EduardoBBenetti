@@ -75,11 +75,11 @@ This test was create to check the shift(Range base, double delta, boolean allowZ
 **Example of test added to increase mutation score in DataUtilities.java**
 
 testEqualArrayNull()
-This test was created to check the specific condition inside the equal(double[][] a, double[][] b) method in which the b is null. For the test, two arrays were created, array1 with values and array2 being null. This test was able to kill several mutations since in Assignment 3, the tests our group had did not cover the specific condition where b was null, increading the overall mutation score for Data Utilities.
+This test was created to check the specific condition inside the equal(double[][] a, double[][] b) method in which the b is null. For the test, two arrays were created, array1 with values and array2 being null. This test was able to kill several mutations since in Assignment 3, the tests our group had did not cover the specific condition where b was null, increasing the overall mutation score for Data Utilities.
 
 # Analysis drawn on the effectiveness of each of the test classes
 
-After adding 
+The result of our mutation testing show a significant increase in effectiveness for both Range and DataUtilities Classes. The mutation coverage score for the Range class increased by 20%, while the mutation coverage score increased a total of 43%. The results demonstrate the success of the lab, as our tests exceed the required 10% increase specificed at the markdown file. These improvements in mutation testing helps to identify potential defect and issues within the code, which ultimately leads to a more robust and realiable software system. It is also important to note that as the coverage of our mutation testing increases, the mutations become harder to detect. While we have achieved our goal, there is still room for improvement. As we continue to refine our testing methods and techniques, we are able to work towards identifying and addresing even more subtle defects within the code, which increases the overall quality of the software system.
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
