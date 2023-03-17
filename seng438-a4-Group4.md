@@ -59,6 +59,15 @@ RANGE CLASS
 
 # Report all the statistics and the mutation score for each test class
 
+Before mutation tests:
+![c547d6c3-ccc5-4d85-825c-2efd5bb0a982](https://user-images.githubusercontent.com/90352983/225778317-151cb5ec-0076-4ca2-8ac5-b4a5ed134007.jpg)
+![dd4a94c6-6900-4749-a1ea-0492e8dfe45a](https://user-images.githubusercontent.com/90352983/225778326-ec4f6e0d-b4d9-45e1-8336-08be0f7172d7.jpg)
+
+After mutation tests:
+![1c84dce5-ddd9-48d2-b52c-f2822d9222af](https://user-images.githubusercontent.com/90352983/225778329-5508a84f-f227-42de-9d8a-b68f25b5217c.jpg)
+![c67d8bbc-5627-4828-8afd-7f8533993c46](https://user-images.githubusercontent.com/90352983/225778342-6095eb85-13b3-4cea-ae4d-a4d020ec08e9.jpg)
+
+
 # Analysis drawn on the effectiveness of each of the test classes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
