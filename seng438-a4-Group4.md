@@ -77,6 +77,9 @@ This test was create to check the shift(Range base, double delta, boolean allowZ
 testEqualArrayNull()
 This test was created to check the specific condition inside the equal(double[][] a, double[][] b) method in which the b is null. For the test, two arrays were created, array1 with values and array2 being null. This test was able to kill several mutations since in Assignment 3, the tests our group had did not cover the specific condition where b was null, increasing the overall mutation score for Data Utilities.
 
+Total of tests added on RangeTest.java: 8
+Total of tests added on DataUtilities.java: 13
+
 _OBS: The team did not include all the test cases created because there is a lot of them, please refer to the DataUtilitiesTest.java and RangeTest.java under Part 1 folder_
 
 # Analysis drawn on the effectiveness of each of the test classes
