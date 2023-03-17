@@ -79,6 +79,8 @@ This test was created to check the specific condition inside the equal(double[][
 
 # Analysis drawn on the effectiveness of each of the test classes
 
+After adding 
+
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
 Equivalent mutants are very important for a complete analysis of the testing process of a software. Fundamentally, equivalent mutants are syntactically different but semantically equivalent to the original code. Meaning that, it is possible to create mutants that follow the same exact logic even not being written the same way, by changing inequality signs or with simple mathematical computations. Since mutations are used to simulate possible human errors or simple logical issues, using equivalent mutants will give the developer further information about the quality of his or her test suit. With that, they should be able to spot weaknesses in the unit test and consequently fix them to have a higher-quality final product.  
