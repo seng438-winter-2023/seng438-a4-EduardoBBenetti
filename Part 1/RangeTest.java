@@ -617,7 +617,7 @@ public class RangeTest {
 	 * This method is testing lower bound function with mutations
 	 */
 	@Test
-	public void minLowerBound() { // 285: 1, 2, and 3
+	public void minLowerBound() {
 		double A = Math.sqrt(-11);
 		double B = Math.sqrt(-1);
 		Range R = new Range(1, 4);
@@ -629,7 +629,7 @@ public class RangeTest {
 	 * This method is testing scaling for lower bound of range is correct after scaling
 	 */
 	@Test
-	public void scaleLowerBound() { // 410: 1, 13, 15
+	public void scaleLowerBound() {
 		Range R = new Range(2, 6);
 		Range test = Range.scale(R, 0);
 		assertEquals("The shifted value should be 0", 0, test.getLowerBound(), .000000001d);
@@ -641,7 +641,7 @@ public class RangeTest {
      * bounds of a range
      */
     @Test
-    public void getCentralValueShouldBeZeroPointFive2() { // 132: 40, 41, 42, 43
+    public void getCentralValueShouldBeZeroPointFive2() {
     	double R = exampleRange.getCentralValue();
     	R = exampleRange.getCentralValue();
         assertEquals("The central value of -2 and 3 should be 0.5", 0.5, R, .000000001d);
@@ -651,7 +651,7 @@ public class RangeTest {
      * This method is testing the intersects function
 	 */
 	@Test
-	public void intersectsRangeIsFalse() { // 176: 2 and 3
+	public void intersectsRangeIsFalse() {
 		Range R = new Range(1, 3);
 		double lower = 5;
 		double upper = 11;
@@ -664,7 +664,7 @@ public class RangeTest {
 	 * This method is testing the lower boundary of intersect
 	 */
 	@Test
-	public void intersectsBoundary() { // 157: 1, 6 and 9
+	public void intersectsBoundary() {
 		Range R = new Range(1, 4);
 		boolean test = R.intersects(1, 1);
 		assertFalse("The result should be false", test);
@@ -674,7 +674,7 @@ public class RangeTest {
 	 * This method is testing intersection with parameters inside range
 	 */
 	@Test
-	public void intersectsRangeInsideRange() { // 161: 4, 29, 35
+	public void intersectsRangeInsideRange() {
 		Range R = new Range(1, 3); 
 		double lower = 2;
 		double upper = 2;
@@ -687,7 +687,7 @@ public class RangeTest {
 	 * smaller lower bound than b0
 	 */
 	@Test
-	public void intersectsSecondArgBigger() { // 176: 4
+	public void intersectsSecondArgBigger() {
 		Range R = new Range(1, 3);
 		double lower = 0;
 		double upper = 5;
@@ -700,7 +700,7 @@ public class RangeTest {
 	 * This method is testing intersection with parameters inside range
 	 */
 	@Test
-	public void intersectsRangeInsideRange2() { // 161: 12, 18, 42, 48, and 53
+	public void intersectsRangeInsideRange2() {
 		Range R = new Range(1, 4);
 		double lower = 3;
 		double upper = 2;
@@ -713,7 +713,7 @@ public class RangeTest {
 	 * of range match the correct value after shifted
 	 */
 	@Test
-	public void shiftWithNoZeroCrossingWhereValueEqualsZero() { // 390: 1, 2, 5, 7, 9, 13 // 394: 1, 2, 3, 5, 6, 8, 9, 10, 11, 16, 17, 18, 19
+	public void shiftWithNoZeroCrossingWhereValueEqualsZero() {
 		Range R = new Range(0, 0);
 		Range test = Range.shift(R, 11, false);
 		assertEquals("The shifted value should be 11", 11, test.getUpperBound(), .000000001d);
@@ -723,7 +723,7 @@ public class RangeTest {
 	 * This method is testing equals function to check if two Range objects are equal
 	 */
 	@Test
-	public void equalsUpperDiff() { // 433: 9
+	public void equalsUpperDiff() {
 		Range R = new Range(1, 4);
 		boolean test = R.equals(new Range(1, 5));
 		assertFalse("Ranges are equal", test);
@@ -734,7 +734,7 @@ public class RangeTest {
      * calculated hash code for the lower and upper bounds
      */
     @Test
-    public void hashCodeTest2() { // 460: 3, 4 // 462:3, 4
+    public void hashCodeTest2() {
     	int hash = exampleRange.hashCode();
     	hash = exampleRange.hashCode();
         assertEquals("The hash code is 524288", 524288 , hash);
@@ -745,7 +745,7 @@ public class RangeTest {
      * calculated hash code for the lower and upper bounds
      */
     @Test
-    public void hashCodeTest3() { // 463: 22, 12
+    public void hashCodeTest3() {
     	Range R = new Range(-1, 1);
     	R = new Range(-1, 1);
     	int I = R.hashCode();
@@ -757,7 +757,7 @@ public class RangeTest {
      * and negative upper bound to string
      */
     @Test
-    public void toStringNegativeNegative2() { // 475: 15, 16, 17, 18
+    public void toStringNegativeNegative2() {
     	Range R = new Range(-4.3, -1.2);
     	String S = R.toString();
     	S = R.toString();
