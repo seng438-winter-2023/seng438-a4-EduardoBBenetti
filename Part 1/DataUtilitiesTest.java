@@ -85,6 +85,8 @@ public class DataUtilitiesTest {
         assertEquals(2.0, DataUtilities.calculateColumnTotal(table, 1), EPSILON);
     }
 
+    // TESTS LAB 4
+	
     /**
      * Some checks for the calculateColumnTotal() method.
      */
@@ -241,8 +243,6 @@ public class DataUtilitiesTest {
         b[0][0] = 99.9;
         assertTrue(DataUtilities.equal(a, b));
     }
-    
-    // TESTS LAB 4
 
 	/**
 	 * Testing the equals() function to see if a null and double array
