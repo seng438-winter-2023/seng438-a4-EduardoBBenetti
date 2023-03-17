@@ -669,18 +669,6 @@ public class RangeTest {
 		boolean test = R.intersects(1, 1);
 		assertFalse("The result should be false", test);
 	}
-
-	/**
-	 * This method is testing intersection with parameters inside range
-	 */
-	@Test
-	public void intersectsRangeInsideRange() {
-		Range R = new Range(1, 3); 
-		double lower = 2;
-		double upper = 2;
-		boolean test = R.intersects(lower, upper);
-		assertTrue("The output should be true", test);
-	}
 	
 	/**
 	 * This method is testing intersect for bigger upper bound than b1 and
@@ -694,6 +682,18 @@ public class RangeTest {
 		Range R2 = new Range(lower, upper);
 		boolean test = R.intersects(R2);
 		assertTrue("The result should be true", test);
+	}
+
+	/**
+	 * This method is testing intersection with parameters inside range
+	 */
+	@Test
+	public void intersectsRangeInsideRange() {
+		Range R = new Range(1, 3); 
+		double lower = 2;
+		double upper = 2;
+		boolean test = R.intersects(lower, upper);
+		assertTrue("The output should be true", test);
 	}
 
 	/**
