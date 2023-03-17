@@ -67,51 +67,15 @@ RANGE CLASS
 ![1c84dce5-ddd9-48d2-b52c-f2822d9222af](https://user-images.githubusercontent.com/90352983/225778329-5508a84f-f227-42de-9d8a-b68f25b5217c.jpg)
 ![c67d8bbc-5627-4828-8afd-7f8533993c46](https://user-images.githubusercontent.com/90352983/225778342-6095eb85-13b3-4cea-ae4d-a4d020ec08e9.jpg)
 
-**New range tests**
-
-minLowerBound()
-
-scaleLowerBound()
-
-getCentralValueShouldBeZeroPointFive2()
-
-intersectsRangeIsFalse()
-
-intersectsBoundary()
-
-intersectsSecondArgBigger()
-
-intersectsRangeInsideRange()
-
-intersectsRangeInsideRange2()
+**Example of test added to increase mutation score in Range.java**
 
 shiftWithNoZeroCrossingWhereValueEqualsZero()
+This test was create to check the shift(Range base, double delta, boolean allowZeroCrossing) method. First, a Range object with a range from 0 to 0 was created and this object called the shift method with delta being a shift of 11, and with allowZeroCrossing being false, making the helper method shiftWithNoZeroCrossing(double value, double delta) be called. To test the shift method, assertEquals() was called to make suze our range from 0 to 0 increased its upper bound to 11. This test case killed several mutants since our test suite from Assignment 3 did not cover most of the shiftWithNoZeroCrossing method including when the Range object is 0, increasing our overall mutation score for Range.
 
-equalsUpperDiff()
-
-hashCodeTest2()
-
-hashCodeTest3()
-
-toStringNegativeNegative2()
-
-**New data utilities tests**
-
-testEqualNullArray()
+**Example of test added to increase mutation score in DataUtilities.java**
 
 testEqualArrayNull()
-
-testEqualArraysDiffLength()
-
-calculateColumnTotalNull()
-
-calculateRowTotalNull()
-
-createNumber2DNullArray()
-
-createNumberArrayMinDouble()
-
-createNumberArrayNull()
+This test was created to check the specific condition inside the equal(double[][] a, double[][] b) method in which the b is null. For the test, two arrays were created, array1 with values and array2 being null. This test was able to kill several mutations since in Assignment 3, the tests our group had did not cover the specific condition where b was null, increading the overall mutation score for Data Utilities.
 
 # Analysis drawn on the effectiveness of each of the test classes
 
